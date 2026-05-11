@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário</title>
+        <link rel="stylesheet" href="formulario.css">
+    </head>
+    <body>
+        <header>
+            <h1>
+                Formulário de Interesses Musicais
+            </h1>
+
+            <p>
+                O seguinte formulário busca coletar informações sobre os interesses musicais dos usuários, de modo a registrar as suas informações.
+            </p>
+
+        </header>
+
+        <main>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone">
+
+                <label for="birthdate">Data de Nascimento:</label>
+                <input type="date" id="birthdate" name="birthdate">
+
+                <label for="profilepic">Foto de Perfil:</label>
+                <input type="file" id="profilepic" name="profilepic" accept="image/*">
+
+                <fieldset>
+                    <legend> Seleção dos estilos e artistas favoritos </legend>
+                    <p> Selecione os seus estilos musicais favoritos entre as opções, além de artistas relacionados ao estilo:</p>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="rock" name="musical_interests" value="rock">
+                            <label for="rock">Rock</label>
+                            <div class = "caixa_artistas hidden" id = "caixa_rock">
+                                <label for="artistas_rock">Artistas de Rock:</label>
+                                <textarea id = "artistas_rock" name = "artistas_rock" rows = "3" placeholder = "Insira aqui seus artistas preferidos de Rock"></textarea>
+                            </div>
+
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="pop" name="musical_interests" value="pop">
+                            <label for="pop">Pop</label>
+                            <div class = "caixa_artistas hidden" id = "caixa_pop">
+                                <label for="artistas_pop">Artistas de Pop:</label>
+                                <textarea id = "artistas_pop" name = "artistas_pop" rows = "3" placeholder = "Insira aqui seus artistas preferidos de Pop"></textarea>
+                            </div>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="hiphop" name="musical_interests" value="hiphop">
+                            <label for="hiphop">Hip-Hop</label>
+                            <div class = "caixa_artistas hidden" id = "caixa_hiphop">
+                                <label for="artistas_hiphop">Artistas de Hip-Hop:</label>
+                                <textarea id = "artistas_hiphop" name = "artistas_hiphop" rows = "3" placeholder = "Insira aqui seus artistas preferidos de Hip-Hop"></textarea>
+                            </div>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="jazz" name="musical_interests" value="jazz">
+                            <label for="jazz">Jazz</label>
+                            <div class = "caixa_artistas hidden" id = "caixa_jazz">
+                                <label for="artistas_jazz">Artistas de Jazz:</label>
+                                <textarea id = "artistas_jazz" name = "artistas_jazz" rows = "3" placeholder = "Insira aqui seus artistas preferidos de Jazz"></textarea>
+                            </div>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="classical" name="musical_interests" value="classical">
+                            <label for="classical">Clássica</label>
+                            <div class = "caixa_artistas hidden" id = "caixa_classical">
+                                <label for="artistas_classical">Artistas de Música Clássica:</label>
+                                <textarea id = "artistas_classical" name = "artistas_classical" rows = "3" placeholder = "Insira aqui seus artistas preferidos de Música Clássica"></textarea>
+                            </div>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="electronic" name="musical_interests" value="electronic">
+                            <label for="electronic">Eletrônica</label>
+                            <div class = "caixa_artistas hidden" id = "caixa_electronic">
+                                <label for="artistas_electronic">Artistas de Música Eletrônica:</label>
+                                <textarea id = "artistas_electronic" name = "artistas_electronic" rows = "3" placeholder = "Insira aqui seus artistas preferidos de Música Eletrônica"></textarea>
+                            </div>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="country" name="musical_interests" value="country">
+                            <label for="country">Country/Sertanejo</label>
+                            <div class = "caixa_artistas hidden" id = "caixa_country">
+                                <label for="artistas_country">Artistas de Country/Sertanejo:</label>
+                                <textarea id = "artistas_country" name = "artistas_country" rows = "3" placeholder = "Insira aqui seus artistas preferidos de Country/Sertanejo"></textarea>
+                            </div>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="pagode" name="musical_interests" value="pagode">
+                            <label for="pagode">Pagode</label>
+                            <div class = "caixa_artistas hidden" id = "caixa_pagode">
+                                <label for="artistas_pagode">Artistas de Pagode:</label>
+                                <textarea id = "artistas_pagode" name = "artistas_pagode" rows = "3" placeholder = "Insira aqui seus artistas preferidos de Pagode"></textarea>
+                            </div>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="reggae" name="musical_interests" value="reggae">
+                            <label for="reggae">Reggae</label>
+                            <div class = "caixa_artistas hidden" id = "caixa_reggae">
+                                <label for="artistas_reggae">Artistas de Reggae:</label>
+                                <textarea id = "artistas_reggae" name = "artistas_reggae" rows = "3" placeholder = "Insira aqui seus artistas preferidos de Reggae"></textarea>
+                            </div>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="metal" name="musical_interests" value="metal">
+                            <label for="metal">Metal</label>
+                            <div class = "caixa_artistas hidden" id = "caixa_metal">
+                                <label for="artistas_metal">Artistas de Metal:</label>
+                                <textarea id = "artistas_metal" name = "artistas_metal" rows = "3" placeholder = "Insira aqui seus artistas preferidos de Metal"></textarea>
+                            </div>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="blues" name="musical_interests" value="blues">
+                            <label for="blues">Blues</label>
+                            <div class = "caixa_artistas hidden" id = "caixa_blues">
+                                <label for="artistas_blues">Artistas de Blues:</label>
+                                <textarea id = "artistas_blues" name = "artistas_blues" rows = "3" placeholder = "Insira aqui seus artistas preferidos de Blues"></textarea>
+                            </div>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="sacred" name="musical_interests" value="sacred">
+                            <label for="sacred">Música Sacra</label>
+                            <div class = "caixa_artistas hidden" id = "caixa_sacred">
+                                <label for="artistas_sacred">Artistas de Música Sacra:</label>
+                                <textarea id = "artistas_sacred" name = "artistas_sacred" rows = "3" placeholder = "Insira aqui seus artistas preferidos de Música Sacra"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <p>Selecione os seus 3 preferidos álbuns de música dentre os 55 indicados na atividade de tabela:</p>   <!-- Os labels foram repetidos em sequência com o uso da IA-->
+                <ul>
+
+                    <li><input type="checkbox" id="album1" name="album_preferences" value="album1" class="album_checkbox">
+                    <label for="album1">The Dark Side of the Moon - Pink Floyd</label></li>
+
+                    <li><input type="checkbox" id="album2" name="album_preferences" value="album2" class="album_checkbox">
+                    <label for="album2">Led Zeppelin IV - Led Zeppelin</label></li>
+
+                    <li><input type="checkbox" id="album3" name="album_preferences" value="album3" class="album_checkbox">
+                    <label for="album3">Back in Black - AC/DC</label></li>
+
+                    <li><input type="checkbox" id="album4" name="album_preferences" value="album4" class="album_checkbox">
+                    <label for="album4">Rumours - Fleetwood Mac</label></li>
+
+                    <li><input type="checkbox" id="album5" name="album_preferences" value="album5" class="album_checkbox">
+                    <label for="album5">Jagged Little Pill - Alanis Morissette</label></li>
+
+                    <li><input type="checkbox" id="album6" name="album_preferences" value="album6" class="album_checkbox">
+                    <label for="album6">The Wall - Pink Floyd</label></li>
+                    
+                    <li><input type="checkbox" id="album7" name="album_preferences" value="album7" class="album_checkbox">
+                    <label for="album7">Brothers in Arms - Dire Straits</label></li>
+
+                    <li><input type="checkbox" id="album8" name="album_preferences" value="album8" class="album_checkbox">
+                    <label for="album8">Appetite For Destruction - Guns N’ Roses</label></li>
+
+                    <li><input type="checkbox" id="album9" name="album_preferences" value="album9" class="album_checkbox">
+                    <label for="album9">Metallica - Metallica</label></li>
+
+                    <li><input type="checkbox" id="album10" name="album_preferences" value="album10" class="album_checkbox">
+                    <label for="album10">Hotel California - Eagles</label></li>
+
+                    <li><input type="checkbox" id="album11" name="album_preferences" value="album11" class="album_checkbox">
+                    <label for="album11">Born in the U.S.A. - Bruce Springsteen</label></li>
+
+                    <li><input type="checkbox" id="album12" name="album_preferences" value="album12" class="album_checkbox">
+                    <label for="album12">Nevermind - Nirvana</label></li>
+
+                    <li><input type="checkbox" id="album13" name="album_preferences" value="album13" class="album_checkbox">
+                    <label for="album13">Bat Out of Hell - Meat Loaf</label></li>
+
+                    <li><input type="checkbox" id="album14" name="album_preferences" value="album14" class="album_checkbox">
+                    <label for="album14">The Joshua Tree - U2</label></li>
+
+                    <li><input type="checkbox" id="album15" name="album_preferences" value="album15" class="album_checkbox">
+                    <label for="album15">Abbey Road - The Beatles</label></li>
+
+                    <li><input type="checkbox" id="album16" name="album_preferences" value="album16" class="album_checkbox">
+                    <label for="album16">Supernatural - Santana</label></li>
+
+                    <li><input type="checkbox" id="album17" name="album_preferences" value="album17" class="album_checkbox">
+                    <label for="album17">Hysteria - Def Leppard</label></li>
+
+                    <li><input type="checkbox" id="album18" name="album_preferences" value="album18" class="album_checkbox">
+                    <label for="album18">Sgt. Pepper’s Lonely Hearts Club Band - The Beatles</label></li>
+
+                    <li><input type="checkbox" id="album19" name="album_preferences" value="album19" class="album_checkbox">
+                    <label for="album19">Unplugged - Eric Clapton</label></li>
+
+                    <li><input type="checkbox" id="album20" name="album_preferences" value="album20" class="album_checkbox">
+                    <label for="album20">Slippery When Wet - Bon Jovi</label></li>
+
+                    <li><input type="checkbox" id="album21" name="album_preferences" value="album21" class="album_checkbox">
+                    <label for="album21">No Jacket Required - Phil Collins</label></li>
+
+                    <li><input type="checkbox" id="album22" name="album_preferences" value="album22" class="album_checkbox">
+                    <label for="album22">Boston - Boston</label></li>
+
+                    <li><input type="checkbox" id="album23" name="album_preferences" value="album23" class="album_checkbox">
+                    <label for="album23">Cracked Rear View - Hootie & The Blowfish</label></li>
+
+                    <li><input type="checkbox" id="album24" name="album_preferences" value="album24" class="album_checkbox">
+                    <label for="album24">Wish You Were Here - Pink Floyd</label></li>
+
+                    <li><input type="checkbox" id="album25" name="album_preferences" value="album25" class="album_checkbox">
+                    <label for="album25">Led Zeppelin II - Led Zeppelin</label></li>
+
+                    <li><input type="checkbox" id="album26" name="album_preferences" value="album26" class="album_checkbox">
+                    <label for="album26">Hybrid Theory - Linkin Park</label></li>
+
+                    <li><input type="checkbox" id="album27" name="album_preferences" value="album27" class="album_checkbox">
+                    <label for="album27">... But Seriously - Phil Collins</label></li>
+
+                    <li><input type="checkbox" id="album28" name="album_preferences" value="album28" class="album_checkbox">
+                    <label for="album28">Tommy - The Who</label></li>
+
+                    <li><input type="checkbox" id="album29" name="album_preferences" value="album29" class="album_checkbox">
+                    <label for="album29">Dookie - Green Day</label></li>
+
+                    <li><input type="checkbox" id="album30" name="album_preferences" value="album30" class="album_checkbox">
+                    <label for="album30">Bridge Over Troubled Water - Simon & Garfunkel</label></li>
+
+                    <li><input type="checkbox" id="album31" name="album_preferences" value="album31" class="album_checkbox">
+                    <label for="album31">The Beatles - The Beatles</label></li>
+
+                    <li><input type="checkbox" id="album32" name="album_preferences" value="album32" class="album_checkbox">
+                    <label for="album32">Use Your Illusion II - Guns N’ Roses</label></li>
+
+                    <li><input type="checkbox" id="album33" name="album_preferences" value="album33" class="album_checkbox">
+                    <label for="album33">Use Your Illusion I - Guns N’ Roses</label></li>
+
+                    <li><input type="checkbox" id="album34" name="album_preferences" value="album34" class="album_checkbox">
+                    <label for="album34">Tragic Kingdom - No Doubt</label></li>
+
+                    <li><input type="checkbox" id="album35" name="album_preferences" value="album35" class="album_checkbox">
+                    <label for="album35">No Need to Argue - The Cranberries</label></li>
+
+                    <li><input type="checkbox" id="album36" name="album_preferences" value="album36" class="album_checkbox">
+                    <label for="album36">Houses of the Holy - Led Zeppelin</label></li>
+
+                    <li><input type="checkbox" id="album37" name="album_preferences" value="album37" class="album_checkbox">
+                    <label for="album37">(What’s the Story) Morning Glory? - Oasis</label></li>
+
+                    <li><input type="checkbox" id="album38" name="album_preferences" value="album38" class="album_checkbox">
+                    <label for="album38">Achtung Baby - U2</label></li>
+
+                    <li><input type="checkbox" id="album39" name="album_preferences" value="album39" class="album_checkbox">
+                    <label for="album39">Frampton Comes Alive! - Peter Frampton</label></li>
+
+                    <li><input type="checkbox" id="album40" name="album_preferences" value="album40" class="album_checkbox">
+                    <label for="album40">Breakfast in America - Supertramp</label></li>
+
+                    <li><input type="checkbox" id="album41" name="album_preferences" value="album41" class="album_checkbox">
+                    <label for="album41">Fallen - Evanescence</label></li>
+
+                    <li><input type="checkbox" id="album42" name="album_preferences" value="album42" class="album_checkbox">
+                    <label for="album42">Californication - Red Hot Chili Peppers</label></li>
+
+                    <li><input type="checkbox" id="album43" name="album_preferences" value="album43" class="album_checkbox">
+                    <label for="album43">MTV Unplugged in New York - Nirvana</label></li>
+
+                    <li><input type="checkbox" id="album44" name="album_preferences" value="album44" class="album_checkbox">
+                    <label for="album44">Enema of the State - Blink -182</label></li>
+
+                    <li><input type="checkbox" id="album45" name="album_preferences" value="album45" class="album_checkbox">
+                    <label for="album45">Paralell Lines - Blondie</label></li>
+
+                    <li><input type="checkbox" id="album46" name="album_preferences" value="album46" class="album_checkbox">
+                    <label for="album46">Out of Time - R.E.M.</label></li>
+
+                    <li><input type="checkbox" id="album47" name="album_preferences" value="album47" class="album_checkbox">
+                    <label for="album47">Led Zeppelin - Led Zeppelin</label></li>
+
+                    <li><input type="checkbox" id="album48" name="album_preferences" value="album48" class="album_checkbox">
+                    <label for="album48">... And Justice for All - Metallica</label></li>
+
+                    <li><input type="checkbox" id="album49" name="album_preferences" value="album49" class="album_checkbox">
+                    <label for="album49">Ten - Pearl Jam</label></li>
+
+                    <li><input type="checkbox" id="album50" name="album_preferences" value="album50" class="album_checkbox">
+                    <label for="album50">Face Value - Phil Collins</label></li>
+
+                    <li><input type="checkbox" id="album51" name="album_preferences" value="album51" class="album_checkbox">
+                    <label for="album51">The Colour and the Shape - Foo Fighters</label></li>
+
+                    <li><input type="checkbox" id="album52" name="album_preferences" value="album52" class="album_checkbox">
+                    <label for="album52">In Your Honor - Foo Fighters</label></li>
+
+                    <li><input type="checkbox" id="album53" name="album_preferences" value="album53" class="album_checkbox">
+                    <label for="album53">One By One - Foo Fighters</label></li>
+
+                    <li><input type="checkbox" id="album54" name="album_preferences" value="album54" class="album_checkbox">
+                    <label for="album54">Foo Fighters - Foo Fighters</label></li>
+
+                    <li><input type="checkbox" id="album55" name="album_preferences" value="album55" class="album_checkbox">
+                    <label for="album55">There Is Nothing Left to Lose - Foo Fighters</label></li>
+
+                </ul>
+
+                <label for="melhor_artista">Selecione qual o(a) melhor cantor(a)/artista da história, dentro da seguinte lista suspensa:</label>
+                <select id="melhor_artista_input" name="melhor_artista">
+                    <option value="" disabled selected>Selecione uma opção:</option>
+                    
+                    <optgroup label="Rock">
+                        <option value="Dave Grohl">Dave Grohl</option>
+                        <option value="Robert Plant">Robert Plant</option>
+                        <option value="Axl Rose">Axl Rose</option>
+                        <option value="David Bowie">David Bowie</option>
+                    </optgroup>
+                    
+                    <optgroup label="Pop">
+                        <option value="Michael Jackson">Michael Jackson</option>
+                        <option value="Prince">Prince</option>
+                        <option value="Whitney Houston">Whitney Houston</option>
+                        <option value="Shakira">Shakira</option>
+                    </optgroup>
+                    
+                    <optgroup label="Hip-Hop">
+                        <option value="Tupac Shakur">Tupac Shakur</option>
+                        <option value="The Notorious B.I.G.">The Notorious B.I.G.</option>
+                        <option value="Eminem">Eminem</option>
+                        <option value="Kendrick Lamar">Kendrick Lamar</option>
+                    </optgroup>
+                    
+                    <optgroup label="Jazz">
+                        <option value="Louis Armstrong">Louis Armstrong</option>
+                        <option value="Ella Fitzgerald">Ella Fitzgerald</option>
+                        <option value="Miles Davis">Miles Davis</option>
+                        <option value="John Coltrane">John Coltrane</option>
+                    </optgroup>
+                    
+                    <optgroup label="Clássica">
+                        <option value="Ludwig van Beethoven">Ludwig van Beethoven</option>
+                        <option value="Wolfgang Amadeus Mozart">Wolfgang Amadeus Mozart</option>
+                        <option value="Johann Sebastian Bach">Johann Sebastian Bach</option>
+                        <option value="Frédéric Chopin">Frédéric Chopin</option>
+                    </optgroup>
+                    
+                    <optgroup label="Eletrônica">
+                        <option value="Daft Punk">Daft Punk</option>
+                        <option value="Deadmau5">Deadmau5</option>
+                        <option value="Skrillex">Skrillex</option>
+                        <option value="Calvin Harris">Calvin Harris</option>
+                    </optgroup>
+                    
+                    <optgroup label="Country/Sertanejo">
+                        <option value="Johnny Cash">Johnny Cash</option>
+                        <option value="Dolly Parton">Dolly Parton</option>
+                        <option value="Garth Brooks">Garth Brooks</option>
+                        <option value="Zezé Di Camargo & Luciano">Zezé Di Camargo & Luciano</option>
+                    </optgroup>
+                    
+                    <optgroup label="Pagode">
+                        <option value="Zeca Pagodinho">Zeca Pagodinho</option>
+                        <option value="Fundo de Quintal">Fundo de Quintal</option>
+                        <option value="Sorriso Maroto">Sorriso Maroto</option>
+                        <option value="Exaltasamba">Exaltasamba</option>
+                    </optgroup>
+                    
+                    <optgroup label="Reggae">
+                        <option value="Bob Marley">Bob Marley</option>
+                        <option value="Peter Tosh">Peter Tosh</option>
+                        <option value="Jimmy Cliff">Jimmy Cliff</option>
+                        <option value="Burning Spear">Burning Spear</option>
+                    </optgroup>
+                    
+                    <optgroup label="Metal">
+                        <option value="Ozzy Osbourne">Ozzy Osbourne</option>
+                        <option value="James Hetfield">James Hetfield</option>
+                        <option value="Bruce Dickinson">Bruce Dickinson</option>
+                        <option value="Rob Halford">Rob Halford</option>
+                    </optgroup>
+                    
+                    <optgroup label="Blues">
+                        <option value="B.B. King">B.B. King</option>
+                        <option value="Muddy Waters">Muddy Waters</option>
+                        <option value="Howlin’ Wolf">Howlin’ Wolf</option>
+                        <option value="Etta James">Etta James</option>
+                    </optgroup>
+                    
+                    <optgroup label="Música Sacra">
+                        <option value="Marco Frisina">Marco Frisina</option>
+                        <option value="Valentino Miserachs">Valentino Miserachs</option>
+                        <option value="Marcos Pavan">Marcos Pavan</option>
+                        <option value="Antônio Vivaldi">Antônio Vivaldi</option>
+                    </optgroup>
+                </select>
+
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Gabriel Luzzi Correa</p>
+            <p>&copy; 2026 Wesley dos Santos Leite</p>
+        </footer>
+
+        <script src="formulario.js"></script>
+    </body>
+</html>

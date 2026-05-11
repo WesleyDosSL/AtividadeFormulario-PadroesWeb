@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: white;
+    color: #1e1e1e;
+}
+
+header,
+main,
+footer {
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: darkslategrey; 
+    color: white; 
+    text-align: center;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.2em;
+    color: lightgreen; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 0 auto; 
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: white;
+    font-weight: 800;
+    max-width: 800px; 
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
+    max-width: 100%;
+}
+
+label, input[type="checkbox"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.caixa_artistas {
+    margin-top: 8px;
+    margin-bottom: 15px;
+    padding-left: 25px;
+}
+
+.caixa_artistas textarea{
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin-top: 5px;
+}
+
+#melhor_artista_input {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    padding-left: 25px;
+}
+
+#melhor_artista_input option {
+    font-size: 14px;
+    padding: 5px;
+    color:black;
+    font-weight: bold;
+}
+
+#melhor_artista_input optgroup {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px;
+}
+
+footer {
+    color: white;
+    background-color: darkslategrey;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    header,
+    main,
+    footer {
+        width: 94%;
+    }
+}
