@@ -144,8 +144,6 @@ ul li {
     margin-bottom: 10px;
 }
 
-/* GRID MÁGICO PARA OS 55 ÁLBUNS */
-/* Isso vai criar várias colunas automaticamente de acordo com o tamanho da tela */
 ul:has(.album_checkbox) {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));

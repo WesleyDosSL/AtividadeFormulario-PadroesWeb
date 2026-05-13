@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
             resumoErrosDiv.classList.remove('hidden');
         } else {
             // SUCESSO 100%
-            alert("Tudo validado com sucesso! Nenhuma falha encontrada.\nNo próximo passo, substituiremos esse Alert pela tela de Resumo de Dados Confirmada.");
+            alert("Tudo validado com sucesso! Nenhuma falha encontrada.\n.");
         }
     });
 
