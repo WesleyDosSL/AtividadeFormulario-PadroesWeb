@@ -1,129 +1,281 @@
-body {
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5;
-    background-color: white;
-    color: #1e1e1e;
-}
-
-header,
-main,
-footer {
-    width: 100%;
-    margin: 0 auto;
-}
-
-header {
-    background-color: darkslategrey; 
-    color: white; 
-    text-align: center;
-    padding: 30px 20px;
-    margin-bottom: 20px;
-    border-radius: 8px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-}
-
-header h1 {
-    margin: 0 0 10px 0;
-    font-size: 2.2em;
-    color: lightgreen; 
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-header p {
-    margin: 0 auto; 
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: white;
-    font-weight: 800;
-    max-width: 800px; 
 }
 
 html, body {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6; /* Fundo cinza bem claro */
+    color: #333;
     overflow-x: hidden;
 }
 
+/* Cabeçalho */
+header {
+    background-color: darkslategrey; 
+    color: white; 
+    text-align: center;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+header h1 {
+    font-size: 2.2em;
+    color: lightgreen; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #e0e0e0;
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+/* Formulário */ 
 main {
     flex: 1;
-    max-width: 100%;
+    width: 100%;
+    max-width: 1000px; /* Limita a largura do formulário */
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-label, input[type="checkbox"] {
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+fieldset {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: #fafafa;
+}
+
+legend {
+    background-color: darkslategrey;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Inpus de texto e seleção */
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+/* Indicador visual de campos obrigatórios  */
+label:has(+ input[required])::after {
+    content: " *";
+    color: red;
+    font-weight: bold;
+}
+
+/* Aplica estilo a todos os campos de digitação e seleção */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao clicar no input (Focus) */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: darkslategrey;
+    box-shadow: 0 0 5px rgba(47, 79, 79, 0.3);
+}
+
+/* Checkboxes e listas */
+/* Ajuste para colocar o checkbox e o texto na mesma linha */
+input[type="checkbox"] {
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+input[type="checkbox"] + label {
     display: inline-block;
-    vertical-align: middle;
-    margin: 10px 0;
+    margin-top: 0;
+    font-weight: normal;
+    cursor: pointer;
 }
 
+ul {
+    list-style: none; /* Remove as bolinhas das listas */
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* GRID MÁGICO PARA OS 55 ÁLBUNS */
+/* Isso vai criar várias colunas automaticamente de acordo com o tamanho da tela */
+ul:has(.album_checkbox) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+/* Caixa de artistas oculta */
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .caixa_artistas {
-    margin-top: 8px;
-    margin-bottom: 15px;
-    padding-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 26px;
+    border-left: 3px solid lightgreen;
 }
 
-.caixa_artistas textarea{
-    width: 100%;
-    max-width: 400px;
-    display: block;
-    margin-top: 5px;
+.caixa_artistas textarea {
+    max-width: 100%; /* Permite que ocupe todo o espaço disponível no mobile */
 }
 
-#melhor_artista_input {
-    width: 100%;
-    max-width: 400px;
-    display: block;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-top: 8px;
-    margin-bottom: 15px;
-    padding-left: 25px;
-}
-
-#melhor_artista_input option {
-    font-size: 14px;
-    padding: 5px;
-    color:black;
-    font-weight: bold;
-}
-
-#melhor_artista_input optgroup {
-    font-weight: bold;
-    font-size: 16px;
-    padding: 5px;
-}
-
-footer {
-    color: white;
-    background-color: darkslategrey;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    border-radius: 8px;
+/* Botões */
+button {
+    padding: 12px 25px;
     font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button[type="submit"] {
+    background-color: #2e8b57; /* Verde escuro */
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #246b43;
+}
+
+button[type="reset"] {
+    background-color: #d9534f; /* Vermelho suave */
+    color: white;
+}
+
+button[type="reset"]:hover {
+    background-color: #c9302c;
+}
+
+button:active {
+    transform: scale(0.98); /* Efeito de clique */
+}
+
+/* Rodapé */
+footer {
+    background-color: darkslategrey;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 40px;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
 footer p {
     margin: 5px 0;
-    font-weight: bold;
 }
 
+footer a {
+    color: lightgreen;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Tamanho das imagens de email no footer */
+footer img {
+    width: 25px; /* Tamanho do ícone */
+    height: 25px;
+    vertical-align: middle; 
+    margin-left: 8px; /* Dá um espacinho em relação ao nome */
+    transition: transform 0.2s ease;
+}
+
+footer img:hover {
+    transform: scale(1.2); 
+}
+
+/* Responsividade */
 @media (max-width: 700px) {
-    header,
-    main,
-    footer {
-        width: 94%;
+    form {
+        padding: 20px 15px;
     }
+    
+    button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Logo SVG */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Espaço entre a logo e o texto */
+    margin-bottom: 10px;
+}
+
+.header-container h1 {
+    margin: 0;
+}
+
+.logo-svg {
+    flex-shrink: 0; /* logo não muda de tamanho*/
+    transition: transform 0.3s ease;
+}
+
+.logo-svg:hover {
+    transform: scale(1.1);
 }
